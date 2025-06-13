@@ -1,0 +1,165 @@
+/* body {
+overflow-y: auto;
+} */
+
+.skills-section {
+  margin-top: 60px;
+    padding: 4rem 2rem;
+    
+
+}
+
+
+.skills-header {
+  text-align: center;
+  
+}
+
+.skills-header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fb6f92;
+  text-shadow: 0 0 10px #fb6f92;
+  margin-bottom: -20px;
+  
+}
+
+.skills-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* Grid container for skill categories */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 60px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+/* Card-style skill category */
+.skills-category {
+  background: white;
+  padding: 1.5rem;
+ border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  height: 460px;
+}
+
+.skills-category:hover {
+  transform: translateY(-4px);
+}
+
+.skills-category h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  color: #333;
+}
+
+/* Skill items */
+.skill-set {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+
+.skill-item {
+  margin-bottom: 1rem;
+}
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.skill-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.skill-percent {
+  font-weight: 500;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.skill-item span {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Progress bar styling */
+.progress-bar {
+  background-color: #f0f0f0;
+  height: 10px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #ff7a7a;
+  width: 0; /* Start from 0 */
+  border-radius: 20px;
+  transition: width 2s ease;
+}
+
+
+/* Optional animation on scroll (via AOS) */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+
+
+/* Padding adjusts on smaller screens */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .skills-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .skills-category {
+    height: auto; /* remove fixed height on small screens */
+    padding: 1.2rem;
+  }
+}
+
+/* For very small devices like phones */
+@media (max-width: 480px) {
+  .skills-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .skills-category h3 {
+    font-size: 1.2rem;
+  }
+
+  .skill-label {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skill-percent {
+    margin-top: 0.3rem;
+    font-size: 0.85rem;
+  }
+}

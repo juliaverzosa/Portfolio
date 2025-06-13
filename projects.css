@@ -1,0 +1,383 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* wider cards */
+  align-items: start;
+  gap: 3rem; /* more space between cards */
+  padding: 3rem; /* more padding around the grid */
+}
+
+
+
+
+.project-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 460px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.project-card:hover {
+  transform: scale(1.1) !important; /* Scales the whole card */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow for "pop" */
+  z-index: 10;
+}
+
+
+
+.project-card {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  padding: 1rem;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+text-overflow: ellipsis;
+
+}
+
+.project-content h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.project-content p {
+  margin: 0.3rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.tech-used {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-used span {
+  background-color: #bba0a74d; /* light gray */
+  color: #333333b4;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.project-detail-header {
+  text-align: left;
+  max-width: 1000px;
+  margin-top: 5%;
+  margin-left: 21%;
+  margin-bottom: -60px;
+}
+
+.project-title-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-title-wrapper h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+
+
+.project-detail-header p {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 0;
+}
+
+
+
+.project-card .overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  color: #fff;
+  padding: 1rem;
+  transition: background 0.3s;
+}
+
+
+.projects-header {
+  text-align: center;
+  margin: 6rem 0 0;
+}
+
+.projects-header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fb6f92;
+  text-shadow: 0 0 10px #fb6f92;
+  margin-bottom: -20px;
+  
+}
+
+.project-slider {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.slider-track {
+  display: flex;
+  gap: 2rem;
+}
+
+
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: white;
+  padding: 1rem;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+.carousel-container {
+
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+    margin-top: 80px;
+    transition: height 0.3s ease;
+  position: relative;
+  width: 100%;
+   border-radius: 1.5rem ;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  will-change: transform;
+}
+
+
+.carousel-card {
+    flex: 0 0 100%;
+  height: 520px; 
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 1.5rem ;
+  overflow: hidden;
+  margin-top: -140px;
+}
+
+
+.carousel-card img {
+ width: 100%;
+  height: 100%; /* Adjust to your preference */
+  object-fit: cover;
+  display: block;
+ border-radius: 1.5rem ;
+}
+
+
+.carousel-card .overlay {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: #fff;
+  padding: 1rem;
+  width: 100%;
+   border-radius: 1.5rem ;
+}
+
+
+
+/* Arrows */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-220%);
+  font-size: 2rem;
+  background: transparent;
+  color: #fb6f92d2;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Dots */
+.dots {
+  text-align: center;
+  margin-top: 1rem;
+  transform: translateY(-250%);
+}
+
+.dots span {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #cccccc8f;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dots .active {
+  background-color: #fb6f92ad;
+}
+
+
+@media (max-width: 1024px) {
+  .project-detail-header {
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+  }
+
+  .project-title-wrapper {
+    justify-content: center;
+  }
+
+  .project-title-wrapper h1 {
+    font-size: 1.7rem;
+  }
+
+  .project-detail-header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .project-card {
+    height: auto;
+  }
+
+  .project-content h3 {
+    font-size: 1rem;
+  }
+
+  .project-content p {
+    font-size: 0.85rem;
+  }
+
+  .tech-used span {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+  }
+
+  .projects-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .carousel-card {
+    height: 400px;
+  }
+
+  .nav {
+    font-size: 1.5rem;
+  }
+
+  .dots {
+    transform: translateY(-150%);
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    padding: 1rem;
+    gap: 1.5rem;
+    
+  }
+
+  .project-card {
+    transform: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .project-card:hover {
+    transform: none !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .carousel-card {
+    height: 320px;
+  }
+
+  .carousel-card .overlay {
+    font-size: 0.85rem;
+  }
+
+  .nav {
+    font-size: 1.2rem;
+    padding: 0.4rem 0.7rem;
+  }
+
+  .projects-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .dots {
+    transform: translateY(-180%);
+  }
+}

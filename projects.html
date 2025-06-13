@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects</title>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="projects.css" />
+
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navbar (copied exactly from your index.html) -->
+  <header>
+    <nav>
+      <div class="nav-container">
+        <!-- <div class="logo" data-aos="zoom-in" data-aos-duration="1000">
+          <span>Julia</span>
+        </div> -->
+        <div class="links">
+          <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></div>
+          <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+          <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="projects.html" class="active">Projects</a></div>       
+<!-- <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contact.html">Contact</a></div>        </div> -->
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+      </div>
+      <div class="dropdown">
+        <div class="links"> 
+          <a href="index.html">Home</a>
+          <a href="skills.html">Skills</a>
+          <a href="projects.html">Projects</a>
+          <!-- <a href="contact.html">Contact</a> -->
+          <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="projects-header" data-aos="fade-up" data-aos-duration="1000">
+      <h1>Projects</h1>
+    </div>
+
+<section class="projects-grid" data-aos="fade-up">
+
+  
+
+
+
+
+<a href="palette.html" class="project-card" data-aos="fade-up" data-aos-duration="1000">  <img src="/palette/palette.png" alt="Farmacia Arah POS Screenshot">
+    <div class="project-content">
+    <h3>Palette</h3>
+    <p>A Social Media App for Artists</p>
+    <p class="tech-used">
+  <span>HTML</span>
+  <span>CSS</span>
+  <span>JavaScript</span>
+</p>
+  </div>
+</a>
+
+
+<a href="artport.html" class="project-card" data-aos="fade-up" data-aos-duration="1000">  <img src="/artport/artport.png" alt="Farmacia Arah POS Screenshot">
+  <div class="project-content">
+    <h3>Art Portfolio</h3>
+    <p>Personal Art Porfolio for Client's Reference</p>
+   <p class="tech-used">
+  <span>ReactJS</span>
+  <span>HTML</span>
+  <span>CSS</span>
+  <span>JavaScript</span>
+</p>
+  </div>
+</a>
+
+<a href="farmarah.html" class="project-card" data-aos="fade-up" data-aos-duration="1000">  <img src="/farmarah/farmarah.png" alt="Farmacia Arah POS Screenshot">
+  <div class="project-content">
+    <h3>Farmacia Arah</h3>
+    <p>Inventory and POS system for a local pharmacy</p>
+   <p class="tech-used">
+  <span>Laravel</span>
+  <span>MySQL</span>
+  <span>HTML/CSS</span>
+  <span>Bootstrap</span>
+  <span>JavaScript</span>
+  <span>Figma(Design/Prototyping)</span>
+</p>
+  </div>
+</a>
+
+ <a href="expensure.html" class="project-card" data-aos="fade-up" data-aos-duration="1000">  <img src="/expensure/expensure.png" alt="Farmacia Arah POS Screenshot">
+  <div class="project-content">
+    <h3>ExpenSure</h3>
+    <p>Personal Expense Manager</p>
+    <p class="tech-used">
+  <span>PHP</span>
+  <span>MySQL</span>
+  <span>HTML/CSS</span>
+  <span>JavaScript</span>
+</p>
+  </div>
+</a>
+
+
+
+<a href="project1.html" class="project-card" data-aos="fade-up">  <img src="proj1.png" alt="Farmacia Arah POS Screenshot">
+  <div class="project-content">
+    <h3>Farmacia Arah POS</h3>
+    <p>Inventory and point-of-sale system designed for efficient pharmacy operations.</p>
+    <p class="tech-used">
+  <span>Laravel</span>
+  <span>MySQL</span>
+  <span>HTML/CSS</span>
+  <span>JavaScript</span>
+</p>
+  </div>
+</a>
+
+
+
+  <!-- Add more project cards as needed -->
+</section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Responsive nav JS
+    function hamburg() {
+      document.querySelector('.dropdown').style.display = 'block';
+    }
+
+    function cancel() {
+      document.querySelector('.dropdown').style.display = 'none';
+    }
+  </script>
+          <script>
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector("nav");
+    if (window.scrollY > 20) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+</body>
+<script>
+  let currentIndex = 0;
+  const track = document.getElementById("carouselTrack");
+  const cards = document.querySelectorAll(".carousel-card");
+  const dotsContainer = document.getElementById("dotsContainer");
+
+  // Create dots
+  cards.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.onclick = () => goToSlide(i);
+    dotsContainer.appendChild(dot);
+  });
+
+  const updateCarousel = () => {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    // Update dots
+    const dots = dotsContainer.querySelectorAll("span");
+    dots.forEach(dot => dot.classList.remove("active"));
+    if (dots[currentIndex]) dots[currentIndex].classList.add("active");
+  };
+
+  const moveSlide = (step) => {
+    currentIndex += step;
+    if (currentIndex < 0) currentIndex = cards.length - 1;
+    if (currentIndex >= cards.length) currentIndex = 0;
+    updateCarousel();
+  };
+
+  const goToSlide = (index) => {
+    currentIndex = index;
+    updateCarousel();
+  };
+
+  updateCarousel(); // Initialize
+</script>
+
+</html>
