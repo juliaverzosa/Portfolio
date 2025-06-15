@@ -11,12 +11,18 @@
 
   <!-- AOS Animation -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+    <div class="mobile-blocker">
+  <div class="mobile-message">
+    <h2>Mobile View Not Supported</h2>
+    <p>This website is currently under construction for mobile and tablet devices. Please view it on a desktop or laptop.</p>
+  </div>
+</div>
   <!-- Navbar (copied exactly from your index.html) -->
   <header>
     <nav>
@@ -29,17 +35,17 @@
           <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="skills.html">Skills</a></div>
           <div class="link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="projects.html" class="active">Projects</a></div>       
 <!-- <div class="link contact-btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"><a href="contact.html">Contact</a></div>        </div> -->
-        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
-      </div>
+              </div>
+              <!-- <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+
       <div class="dropdown">
         <div class="links"> 
           <a href="index.html">Home</a>
           <a href="skills.html">Skills</a>
           <a href="projects.html">Projects</a>
-          <!-- <a href="contact.html">Contact</a> -->
           <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
         </div>
-      </div>
+      </div> -->
     </nav>
   </header>
 
@@ -112,18 +118,6 @@
 
 
 
-<a href="project1.html" class="project-card" data-aos="fade-up">  <img src="proj1.png" alt="Farmacia Arah POS Screenshot">
-  <div class="project-content">
-    <h3>Farmacia Arah POS</h3>
-    <p>Inventory and point-of-sale system designed for efficient pharmacy operations.</p>
-    <p class="tech-used">
-  <span>Laravel</span>
-  <span>MySQL</span>
-  <span>HTML/CSS</span>
-  <span>JavaScript</span>
-</p>
-  </div>
-</a>
 
 
 
@@ -133,20 +127,22 @@
   </main>
 
   <!-- Scripts -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init({offset:0});
+        </script>
+        <script>
+            function hamburg(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(0px)"
+            }
+            function cancel(){
+                const navbar = document.querySelector(".dropdown")
+                navbar.style.transform = "translateY(-500px)"
+            }
+        </script>
 
-    // Responsive nav JS
-    function hamburg() {
-      document.querySelector('.dropdown').style.display = 'block';
-    }
-
-    function cancel() {
-      document.querySelector('.dropdown').style.display = 'none';
-    }
-  </script>
-          <script>
+        <script>
   window.addEventListener("scroll", function () {
     const navbar = document.querySelector("nav");
     if (window.scrollY > 20) {
@@ -156,6 +152,7 @@
     }
   });
 </script>
+ 
 </body>
 <script>
   let currentIndex = 0;
@@ -193,5 +190,5 @@
 
   updateCarousel(); // Initialize
 </script>
-
+  <script src="script.js"></script>
 </html>

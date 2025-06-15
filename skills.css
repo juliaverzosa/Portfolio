@@ -128,7 +128,11 @@ overflow-y: auto;
 }
 
 
-
+@media (min-width: 884px) {
+    .hamburg {
+        display: none;
+    }
+}
 /* Padding adjusts on smaller screens */
 @media (max-width: 768px) {
   .skills-section {
@@ -143,6 +147,11 @@ overflow-y: auto;
     height: auto; /* remove fixed height on small screens */
     padding: 1.2rem;
   }
+
+      .hamburg {
+        display: none;
+    }
+    
 }
 
 /* For very small devices like phones */
@@ -164,4 +173,122 @@ overflow-y: auto;
     margin-top: 0.3rem;
     font-size: 0.85rem;
   }
+}
+
+
+@media (max-width:884px) {
+    body{
+        overflow-y: visible;
+    }
+
+    nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+
+    .main-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+ 
+    .main-container .content{
+        width: 80%;
+    }
+
+    .social-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+    .cancel{
+        color: white;
+    }
+
+    .main-container .image{
+        width: 80%;
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 1200px) {
+/* Grid container for skill categories */
+.skills-grid {
+  display: grid;
+   grid-template-columns: repeat(3, 1fr);
+  gap: 2.0rem;
+  margin-top: 30px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+
+
+
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+/* Grid container for skill categories */
+.skills-grid {
+  display: grid;
+   grid-template-columns: repeat(2, 1fr);
+  gap: 2.0rem;
+  margin-top: 30px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+/* Card-style skill category */
+.skills-category {
+  background: white;
+  padding: 1.0rem;
+ border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  height: 400px;
+  width: 300px;
+}
+}
+
+/* Phone */
+@media (max-width: 650px) {
+
+/* Grid container for skill categories */
+.skills-grid {
+  display: grid;
+   grid-template-columns: repeat(2, 1fr);
+  gap: 2.0rem;
+  margin-top: 30px;
+  margin-right: 40px;
+  margin-left: 40px;
+  padding-bottom: 20px;
+
+ 
+}
+  .skills-grid {
+    
+    margin: 20px;
+  }
+
+  .skills-category {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+.skills-category {
+  background: white;
+  padding: 1.0rem;
+ border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  height: 400px;
+  width: 270px;
+
+}
+
+
 }
