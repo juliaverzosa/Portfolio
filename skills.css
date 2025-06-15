@@ -214,6 +214,9 @@ overflow-y: auto;
 }
 
 @media (max-width: 1200px) {
+  body{
+    overflow-y: auto;
+  }
 /* Grid container for skill categories */
 .skills-grid {
   display: grid;

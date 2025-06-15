@@ -761,6 +761,7 @@ text-overflow: ellipsis;
 }
 
 
+
 @media (max-width: 1024px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -770,7 +771,6 @@ text-overflow: ellipsis;
 
   .projects-grid {
 
-    gap: 20px;
     margin-bottom: 40px;
     margin-top: 20px;
   }
@@ -781,6 +781,8 @@ text-overflow: ellipsis;
 
 
 }
+
+
 
 
 
@@ -817,12 +819,13 @@ text-overflow: ellipsis;
   
   .projects-grid {
     padding: 2rem 1rem;
-    gap: 2rem;
+      
   }
 
   
   .project-card {
     height: auto;
+    
   }
 
   .project-content h3 {
@@ -873,7 +876,6 @@ text-overflow: ellipsis;
   .projects-grid {
     grid-template-columns: repeat(1, 1fr);
 
-    gap: 20%;
     margin-top: 20px;
   }
 
